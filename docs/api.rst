@@ -1,6 +1,3 @@
-API Reference
-=================
-
 mmdet.apis
 --------------
 .. automodule:: mmdet.apis
@@ -63,7 +60,7 @@ samplers
     :members:
 
 api_wrappers
-^^^^^^^^^^
+^^^^^^^^^^^^
 .. automodule:: mmdet.datasets.api_wrappers
     :members:
 

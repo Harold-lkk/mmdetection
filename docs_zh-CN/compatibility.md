@@ -1,5 +1,18 @@
 # MMDetection v2.x 兼容性说明
 
+## MMDetection 2.18.1
+
+### MMCV compatibility
+
+为了修复 BaseTransformerLayer 中的权重引用问题, MultiheadAttention 中 batch first 的逻辑有所改变。
+我们推荐使用 MMCV v1.3.17 或更高版本。 更多信息请参考 [MMCV PR #1418](https://github.com/open-mmlab/mmcv/pull/1418) 。
+
+## MMDetection 2.18.0
+
+### DIIHead 兼容性
+
+为了支持 QueryInst，在 DIIHead 的返回元组中加入了 attn_feats。
+
 ## MMDetection v2.14.0
 
 ### MMCV 版本
@@ -21,7 +34,7 @@ python tools/model_converters/upgrade_ssd_version.py ${OLD_MODEL_PATH} ${NEW_MOD
 
 ## MMDetection v2.12.0
 
-在 v2.12.0 到 v2.15.0（或以上）版本的这段时间，为了提升通用性和便捷性，MMDetection 正在进行大规模重构。在升级到 v2.12.0 后 MMDetection 不可避免地带来了一些 BC Breaking，包括 MMCV 的版本依赖、模型初始化方式、模型 registry 和 mask AP 的评估。
+在 v2.12.0 到 v2.18.0（或以上）版本的这段时间，为了提升通用性和便捷性，MMDetection 正在进行大规模重构。在升级到 v2.12.0 后 MMDetection 不可避免地带来了一些 BC Breaking，包括 MMCV 的版本依赖、模型初始化方式、模型 registry 和 mask AP 的评估。
 
 ### MMCV 版本
 
